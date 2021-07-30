@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from '../src/data.js';
-=======
-
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from '../src/data.js';
-
-/*  peopleArray, charactersCard */
-
->>>>>>> f86acbe339d6377dd702e593db3415a28d42506a
 
 
 const movies = [
@@ -186,7 +178,6 @@ describe('charactersCard', () => {
  });
 });
 
-<<<<<<< HEAD
 describe('filterDataCharacters', () => {
   it('is a function', () => {
    expect(typeof filterDataCharacters).toBe('function');
@@ -199,22 +190,4 @@ describe('filterDataCharacters', () => {
     "movie": "My Neighbor Totoro"
   }])
   });
-=======
-describe('filterData', () => {
-  it('is a function', () => {
-   expect(typeof filterData).toBe('function');
-  });
-
-  it('returns director s movies selected', () => {
-   expect(filterData(movies, "Hiroyuki Morita")).toStrictEqual([{
-    "title": "The Cat Returns",
-    "release_date": "2002",
-      "rt_score": "89",
-    "director": "Hiroyuki Morita",
-    "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
-  }])
-
-  });
-
->>>>>>> f86acbe339d6377dd702e593db3415a28d42506a
 })
