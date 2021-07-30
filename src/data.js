@@ -30,7 +30,7 @@ export const maping = (data) => {
 
 
 
-const sortData = (data) => data.sort((a, b) => a.release_date > b.release_date ? 1 : -1)
+const sortData = (data) => data.sort((a, b) => a.release_date > b.release_date ? 1 : -1);
 export let sortAscending = (data) => sortData(data);
 export const sortDescending = (data) => sortAscending(data).reverse();
 
@@ -44,17 +44,22 @@ export const filterData = (data, option) => {
   return filterDirector;
 }
 
+export const filterDataCharacters = (data, option) => {
+  const filterCharacters = data.filter((movie => movie.movie === option));
+  return filterCharacters;
+}
+
 
 export const peopleArray = (data) => {
   let peopleArray = []
   for (let film of data) {
       const character = film.people.map(function (people){
-        people.movie = film.title
-        return people
+        people.movie = film.title;
+        return people;
       })
-    peopleArray= peopleArray.concat(character)
+    peopleArray= peopleArray.concat(character);
   }
-  return peopleArray
+  return peopleArray;
 }
 
 
@@ -77,5 +82,5 @@ export const charactersCard = (data) => {
       </div>
       `
   })
-  return characters
+  return characters;
 };

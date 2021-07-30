@@ -1,7 +1,4 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from '../src/data.js';
-
-/*  peopleArray, charactersCard */
-
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from '../src/data.js';
 
 const movies = [
   {
@@ -48,43 +45,33 @@ const movies = [
   }
 ] 
 
-// const sortReleaseDate = [
-//   {
-//     "release_date": "1986"
-//   },
-//   {
-//     "release_date": "1988"
-//   },
-//   {
-//     "release_date": "1995"
-//   },
-//   {
-//     "release_date": "2002"
-//   },   
-//   {
-//     "release_date": "2006"
-//   },
-//   {
-//     "release_date": "2010"
-//   }
-// ]
-
-/* const moviesScore = [
-  { "rt_score": "95" },
-  { "rt_score": "97" },
-  { "rt_score": "91" },
-  { "rt_score": "89" },
-  { "rt_score": "41" }
-] */
-
-/* const moviesTitle = [
-  { "title": "Castle in the Sky" },
-  { "title": "Grave of the Fireflies" },
-  { "title": "Whisper of the Heart" },
-  { "title": "The Cat Returns" },   
-  { "title": "Tales from Earthsea" },
-  { "title": "The Secret World of Arrietty" }
-] */
+const characters = [
+  {
+    "name": "Pazu",
+    "specie": "Human",
+    "movie": "Castle in the Sky"
+  },
+  {
+    "name": "Satsuki Kusakabe",
+    "specie": "Human",
+    "movie": "My Neighbor Totoro"
+  },
+  {
+    "name": "Kiki",
+    "specie": "Witch",
+    "movie": "Kiki's Delivery Service"
+  },
+  {
+    "name": "Seita Yokokawa",
+    "specie": "Human",
+    "movie": "Grave of the Fireflies"
+  },
+  {
+    "name": "Taeko Okajima",
+    "specie": "Human",
+    "movie": "Only Yesterday"
+  } 
+]
 
 
 describe('maping', () => {
@@ -179,4 +166,27 @@ describe('charactersCard', () => {
   it('is a function', () => {
     expect(typeof charactersCard).toBe('function');
   });
+  it('returns an array sorted by worst to best', () => {
+   const expected = sortWorst(movies);
+   expect(parseInt(expected[0].rt_score)).toBe(41);
+   expect(parseInt(expected[1].rt_score)).toBe(89);
+   expect(parseInt(expected[2].rt_score)).toBe(91);
+   expect(parseInt(expected[3].rt_score)).toBe(95);
+   expect(parseInt(expected[4].rt_score)).toBe(95);
+   expect(parseInt(expected[5].rt_score)).toBe(97);
+ });
 });
+
+describe('filterDataCharacters', () => {
+  it('is a function', () => {
+   expect(typeof filterDataCharacters).toBe('function');
+  });
+
+  it('returns character s movie selected', () => {
+   expect(filterDataCharacters(characters, "My Neighbor Totoro")).toStrictEqual([{
+    "name": "Satsuki Kusakabe",
+    "specie": "Human",
+    "movie": "My Neighbor Totoro"
+  }])
+  });
+})
