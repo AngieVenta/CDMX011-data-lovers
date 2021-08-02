@@ -70,6 +70,7 @@ Durante el proyecto, diseñamos cuatro historias de usuario.
 ![Prototipo alta fidelidad Characters](https://i.ibb.co/d243Kfv/Desktop-3.jpg)
 
 2. Para celular
+
 ![Prototipo alta fidelidad Home Cellphone](https://i.ibb.co/7bkLpCx/Android-1.jpg)
 ![Prototipo alta fidelidad Filmography Cellphone](https://i.ibb.co/YNtTrPs/Android-2.jpg)
 ![Prototipo alta fidelidad Characters Cellphone](https://i.ibb.co/ZfnDvR2/Android-3.jpg)

@@ -1,4 +1,4 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from '../src/data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters, score, computeStats } from '../src/data.js';
 
 
 const movies = [
@@ -190,4 +190,20 @@ describe('filterDataCharacters', () => {
     "movie": "My Neighbor Totoro"
   }])
   });
-})
+});
+
+describe('score', () => {
+  it('is a function', () => {
+    expect(typeof score).toBe('function');
+  });  
+});
+
+describe('computeStats', () => {
+  it('is a function', () => {
+    expect(typeof computeStats).toBe('function');
+  });
+  it('returns the average of an array, should return "84.67" for [95,97,91,89,41,95]', () =>{
+    expect(computeStats([95,97,91,89,41,95])).toBe("84.67");
+  })
+});
+
