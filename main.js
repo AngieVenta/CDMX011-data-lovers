@@ -1,4 +1,4 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from './data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters, score, computeStats } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -15,7 +15,7 @@ const charactersDiv = document.getElementById('characters');
 const characters_button = document.getElementById('characters_button');
 const menuHamburguesa = document.getElementById('menuHamburguesa');
 const menu = document.getElementById('menu');
-
+const averageResult= document.getElementById('averageResult');
 
 
 menuHamburguesa.addEventListener('click', () =>{
@@ -96,3 +96,7 @@ filterCharacters.addEventListener('change', (event) => {
         charactersDiv.innerHTML = charactersCard(arrayPeople);            
     }
 })
+
+let scoreArray = score(data_films);
+averageResult.innerHTML = computeStats(scoreArray);
+ 
