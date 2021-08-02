@@ -28,6 +28,7 @@ home_button.addEventListener('click', () => {
     films.style.display = "none";
     selector.style.display = "none";
     characters.style.display = "none";
+    menu.classList.toggle('activated');
 })
 
 
@@ -39,6 +40,7 @@ movies_button.addEventListener('click', () => {
     films.style.display = "flex";
     selector.style.display = "flex";
     characters.style.display = "none";
+    menu.classList.toggle('activated');
 })
 
 
@@ -84,6 +86,7 @@ characters_button.addEventListener('click', () => {
     characters.style.display = "flex";
     let charactersPrint = charactersCard(arrayPeople);
     charactersDiv.innerHTML = charactersPrint;
+    menu.classList.toggle('activated');
 })
 
 const filterCharacters = document.querySelector('.filterCharacters');
