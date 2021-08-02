@@ -112,8 +112,9 @@ body{
 
 .scoreAverage span{
     font-size: 40px;
-    color: #ff005d;    
+    color: #007219;    
 }
+
 .home img {
     margin-bottom: 100px;
     
@@ -498,6 +499,10 @@ footer i{
         font-size: 40px;
     }
     .aboutText{
+        font-size: 15px;
+    }
+
+    .scoreAverage{
         font-size: 15px;
     }
 
